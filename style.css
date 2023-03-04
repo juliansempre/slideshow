@@ -1,0 +1,96 @@
+body{margin:0; padding:0; width:100%; height:100vh; display:flex; justify-content:center; align-items:center;}
+
+.slider{
+position: relative;
+z-index: 0;
+margin:0 auto;
+width:800px;
+height:400px;
+overflow: hidden;
+border:8px solid white;
+box-shadow: 0px 5px 5px 5px rgb(0, 0, 0, 20%) ;
+}
+.slides{
+    width:400%;
+    height: 400px;
+    display:flex;
+    
+}
+.slides input{ display: none;}
+.slides {
+    width:25%;
+    position:relative;
+}
+.slides img{ width:800px;}
+.manual-navigation{
+    position: absolute;
+    width:800px;
+    margin-top: -40px;
+    display:flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 2px solid white;
+    padding:5px;
+    border-radius:10px;
+    cursor:pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background-color: white;
+}
+
+#radio1:checked ~ .first{
+    margin-left:0%;
+}
+#radio2:checked ~ .first{
+    margin-left:-400%;
+}
+#radio3:checked ~ .first{
+    margin-left:-800%;
+}
+#radio4:checked ~ .first{
+    margin-left:-1200%;
+}
+
+.navigation-auto div{
+    border: 2px solid blue;
+    padding: 5px;
+    border-radius:10px;
+    cursor: pointed;
+    transition: 1s;
+    }
+    
+.navigation-auto{
+position: absolute;
+width:800px;
+margin-top:360px;
+display:flex;
+justify-content:center;
+}
+
+.navigation-auto div:not(:last-child){
+margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+background-color: white; /* 18:12s */
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+background-color: white; 
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: white; 
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: white; 
+}
+.le{display: flex; align-items: center; cursor:pointer; background-color: rgb(0, 0, 0, 30%); width: 80px; height: 400px; position: absolute; left: 0;  z-index: 2; }
+.ri{display: flex; align-items: center; cursor:pointer; background-color: rgb(0, 0, 0, 30%); width: 80px; height: 400px; position: absolute; right: 0; z-index: 3; }
+.le:hover{background-color: rgb(0, 0, 0, 45%);}
+.ri:hover{background-color: rgb(0, 0, 0, 45%);}
+.le img{width: 70px; opacity: 30%;}
+.ri img{width: 70px; opacity: 30%;}
